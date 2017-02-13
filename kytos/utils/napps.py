@@ -253,7 +253,7 @@ class NAppsManager:
             pathlib.Path: Temp dir with package contents.
         """
         tmp = tempfile.mkdtemp(prefix='kytos')
-        with tarfile.open(filename, 'r:xz') as tar:
+        with tarfile.open(filename, 'r:bz2') as tar:
             tar.extractall(tmp)
         return Path(tmp)
 
@@ -353,7 +353,7 @@ class NAppsManager:
                 files.remove(filename)
 
         # Create the '.napp' package
-        napp_file = tarfile.open(napp_name + '.napp', 'x:xz')
+        napp_file = tarfile.open(napp_name + '.napp', 'x:bz2')
         [napp_file.add(f) for f in files]
         napp_file.close()
 

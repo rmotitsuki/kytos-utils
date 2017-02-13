@@ -170,7 +170,7 @@ class KytosClient():
                 files.remove(filename)
 
         # Create the '.napp' package
-        napp_file = tarfile.open(napp_name + '.napp', 'x:xz')
+        napp_file = tarfile.open(napp_name + '.napp', 'x:bz2')
         [napp_file.add(f) for f in files]
         napp_file.close()
 
