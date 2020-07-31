@@ -124,6 +124,7 @@ class TestCoverage(Test):
             print('Coverate tests failed. Fix the errors above and try again.')
             sys.exit(-1)
 
+
 class CITest(TestCommand):
     """Run all CI tests."""
 
