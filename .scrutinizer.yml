@@ -13,6 +13,7 @@ build:
         redis: false
     dependencies:
         before:
+            - pip install tox
             - pip install coverage
     tests:
         override:
