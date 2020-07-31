@@ -13,7 +13,7 @@ build:
         redis: false
     dependencies:
         before:
-            - sudo apt-get install -y lzma
+            - sudo apt-get install -y python-lzma
             - pip install coverage
     tests:
         override:
