@@ -645,9 +645,3 @@ class TestNapps(unittest.TestCase):
         self.napps_manager.reload(napps)
 
         napps_client.reload_napps.assert_called_with(napps)
-
-    def test_to_fail(self):
-        """Test supposed to fail to check Scrutinizer and Travis
-
-        Must delete to Master code."""
-        self.assertEqual(1, 2)
